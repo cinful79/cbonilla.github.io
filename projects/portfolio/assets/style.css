@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*color scheme*/
+:root {
+    --primary-color: #41EAD4;
+    --light-primary-color: #FDFFFC;
+    --tertiary-color: #FF9F1C;
+    --dark-color: #011627;
+}
+/*universal styling*/
+body {
+    font-family: 'Actor', sans-serif;
+}
+/*header styling starts*/
+header {
+    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 125px;
+}
+header h1 {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 55px;
+    padding-left: 40px;   
+    color: var(--tertiary-color);
+    text-shadow: 3px 3px 8px black;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 15px;
+}
+nav ul li {
+    font-size:26px;
+    padding: 15px;
+    font-style: normal;
+    text-decoration: none;
+    list-style: none; 
+}
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+nav li::after{
+    content: "";
+    background-color: var(--light-primary-color);
+    height: 3px;
+    width: 0px;
+    display: block;
+    transition: .3s;
+}
+nav li:hover:after {
+    left: 0;
+    width: 100%;
+}
+/*hero styling starts*/
+.hero {
+    background-image: url(assets/images/storm-trooper.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 20%;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.hero h2 {
+    margin-left: 15%;
+    font-size: 40px;
+    color: var(--dark-color);
+    font-style: italic;
+}
+/*main div starts*/
+.main {
+    background-color: var(--dark-color);
+    padding: 35px;
+    color: var(--light-primary-color);
+    display: flex;
+    flex-direction: column;
+}
+.section-title {
+    font-size: 60px;
+    height: auto;
+    width: auto;
+    padding-right: 20px;
+}
+.main h2{
+    color: var(--light-primary-color);
+    border: solid 5px var(--primary-color);
+    background-color: var(--tertiary-color);
+    width: 100%;
+    text-align: center;
+    border-radius: 50px;
+    text-shadow: 3px 3px 8px #011627;
+    font-family: 'Rubik Mono One' , sans-serif;
+}
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+/*about-section starts*/
+.flex-row img {
+    max-height: auto;
+    width: 100%;
+    margin: 25px;
+    border-radius: 50%;
+    flex: 1;
+}
+.about-info {
+    height: auto;
+    font-size: 35px;
+    padding: 30px;
+    text-align: center;
+    flex: 3;
+}
+.about-info span {
+    font-size: 25px;
+}
+.about-me {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/*portfolio grid starts*/
+.grid-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+.work-grid{
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+
+}
+.project {
+    display: flex;
+    align-items: flex-end;
+    padding: 25px 15px;
+    font-size: 20px;
+    border: solid var(--light-primary-color) 7px;
+    text-decoration: none;
+    color: var(--light-primary-color);
+    opacity: 50%;
+    transition: .7s;
+}
+.project:hover {
+    opacity: 100%;
+}
+.project:not(:first-child):hover {
+    filter: saturate(0%);
+}
+.project:not(:first-child):hover::after {
+    content: "Coming Soon";
+    color: red;
+    font-style: italic;
+    font-weight: 250px;
+    font-family: 'Rubik Mono One', sans-serif;
+    transition: 2s;
+}
+.run-buddy {
+    background-image: url(assets/images/run-buddy.jpg);
+    background-size: cover;
+    grid-column: 1 / span 2;
+    grid-row: 1 / 3;
+}
+.project-label {
+    background-color: var(--dark-color);
+    padding: 15px;
+    border-radius: 20px;
+    border: 5px solid var(--tertiary-color);
+}
+.food-timer {
+    background-image: url(assets/images/food-img.jpg);
+    background-size: cover;
+    grid-column: 3 / span 1;
+}
+.hike-planner {
+    background-image: url(assets/images/hiking-img.jpg);
+    background-size: cover;
+    grid-column: 3 / span 1;
+}
+.game-finder {
+    background-image: url(assets/images/game-img.jpg);
+    background-size: cover;
+    grid-column: 1 / span 1;
+}
+.iphone-app {
+    background-image: url(assets/images/phone-img.jpg);
+    background-size: cover;
+    grid-column: 2 / span 1;
+}
+/*contact start*/
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.contact-info ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px;
+}
+.contact li {
+    list-style: none;
+    font-size: 40px;
+}
+.contact li a{
+    text-decoration: none;
+    color: var(--light-primary-color);
+}
+.contact li a:visited {
+    color: var(--primary-color);
+}
+.contact li a:hover{
+    color: var(--tertiary-color);
+}
+
+/*Media queries for different screen sizes*/
+    @media screen and (max-width: 980px) {
+        header {
+            height: auto;
+            flex-direction: row; 
+            flex-wrap: nowrap;
+        }
+        header h1 {
+            font-size: 35px;
+            width: 100%;
+            padding: auto;
+            margin: auto;
+            justify-content: center;
+        }
+        header nav {
+            width: 100%;
+            justify-content: center;
+        }
+        .hero {
+            background-position: 20%;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .work-grid {
+            display: block;
+            height: auto;
+            width: 0%;
+        }
+        .flex-row img{
+            height: auto;
+            width: 50%;
+        }
+        .main h2 {
+            font-size: 45px;
+        }
+        .email {
+            font-size: inherit;
+        }
+    }
