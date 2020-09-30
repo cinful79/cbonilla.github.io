@@ -1,0 +1,37 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "generate team profile cards on an HTML page using node.js and inquirer",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "jest": "^26.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cinful79/team-profile-generator"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "jest",
+    "inquirer",
+    "html",
+    "css",
+    "dom"
+  ],
+  "author": "Cindy Bonilla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cinful79/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/cinful79/team-profile-generator/blob/master/README.md"
+}
